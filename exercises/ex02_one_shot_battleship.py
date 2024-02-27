@@ -43,11 +43,11 @@ while row_counter <= grid_size:
 if row_guess == secret_row and col_guess == secret_col:
     print("Hit!")
 elif row_guess == secret_row:
-    print("Close! Correct column, wrong row. ")
+    print("Close! Correct row, wrong column.")
 elif col_guess == secret_col:
-    print("Close! Correct row, wrong column. ")
+    print("Close! Correct column, wrong row.")
 else: 
-    print("Miss! ")
+    print("Miss!")
 
 
 
