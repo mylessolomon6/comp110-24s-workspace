@@ -56,9 +56,7 @@ def alphabetizer(nels: list[str]) -> dict[str, list[str]]:
 
 def update_attendance(attendance_log: dict[str, list[str]], days: str, goodstu: str) -> None:
     """Keeping track of the students who attended class on specific days."""
-    for key in attendance_log:
-        days = key
-        if days in attendance_log:
-            attendance_log[days].append(goodstu)
-        else:
-            attendance_log[days] = [goodstu]
+    if days in attendance_log:
+        attendance_log[days].append(goodstu)
+    else:
+        attendance_log[days] = [goodstu]
