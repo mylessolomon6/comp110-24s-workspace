@@ -1,7 +1,6 @@
 """Checking to see if my EX05 works under different circumstances."""
 
-__author__: "730392828"
-
+__author__ = "730392828"
 from exercises.ex05.dictionary import invert
 from exercises.ex05.dictionary import favorite_color
 from exercises.ex05.dictionary import count
@@ -23,31 +22,31 @@ def test_invert_uc2() -> dict[str, str]:
 
 
 def test_invert_ec() -> dict[str, str]:
-        """Checking to see if invert function works correctly - edge case."""
-        scope = {}
-        assert invert(scope) == {}
+    """Checking to see if invert function works correctly - edge case."""
+    scope = {}
+    assert invert(scope) == {}
 
 
 def test_favorite_color_uc() -> str:
-     """Checking to see if favorite color works (use case)."""
-     percol = {"Marcus": "blue", "Akoya": "blue", "Alexa": "green"}
-     assert favorite_color(percol) == "blue"
+    """Checking to see if favorite color works (use case)."""
+    percol = {"Marcus": "blue", "Akoya": "blue", "Alexa": "green"}
+    assert favorite_color(percol) == "blue"
 
 
 def test_favorite_color_uc2() -> str:
-     """Checking to see if favorite color works (with stores)."""
-     percol = {"Walmart": "blue", "Target": "red", "Fairprice": "red"}
-     assert favorite_color(percol) == "red"
+    """Checking to see if favorite color works (with stores)."""
+    percol = {"Walmart": "blue", "Target": "red", "Fairprice": "red"}
+    assert favorite_color(percol) == "red"
 
 
 def test_favorite_color_ec() -> str:
-     """Checking to see if favorite color works (with an empty list)."""
-     percol = {"Akoya": "red", "Brian": "green", "Cameron": "red", "Javair": "green"}
-     assert favorite_color(percol) == "red"
+    """Checking to see if favorite color works (with an empty list)."""
+    percol = {"Akoya": "red", "Brian": "green", "Cameron": "red", "Javair": "green"}
+    assert favorite_color(percol) == "red"
 
 
 def test_count_uc() -> dict[str, int]:
-    """Checking to see if count works (use case.)"""
+    """Checking to see if count works (use case)."""
     num4 = ["hello", "graduate", "banana", "hello", "apple"]
     assert count(num4) == {"hello": 2, "graduate": 1, "banana": 1, "apple": 1}
 
@@ -71,7 +70,7 @@ def test_alphabetizer_uc() -> dict[str, list[str]]:
 
 
 def test_alphabetizer_uc2() -> dict[str, list[str]]:
-    """Checking to see if grouping all words with specific letter work. (part 2)"""
+    """Checking to see if grouping all words with specific letter work (part 2)."""
     nels = ["Python", "Camry", "competition", "Potion", "phone"]
     assert alphabetizer(nels) == {"p": ["Python", "Potion", "phone"], "c": ["Camry", "competition"]}
 
@@ -91,8 +90,8 @@ def test_update_attendance_uc() -> None:
     assert attendance_log == {"Monday": ["Akoya", "Cameron"], "Thursday": ["Stacia", "Dontae", "Sam"]}
 
 
-def test_update_attendance_uc() -> None:
-    """Checking to make sure log is working properly. (pt.2)"""
+def test_update_attendance_uc2() -> None:
+    """Checking to make sure log is working properly (pt.2)."""
     attendance_log = {"Tuesday": ["Ronaldo", "Messi"], "Wednesday": ["James", "Bryant"]}
     days = "Tuesday"
     goodstu = "Beckham"
@@ -101,7 +100,7 @@ def test_update_attendance_uc() -> None:
 
 
 def test_update_attendance_ec() -> None:
-    """Checking to make sure log is working properly. (ec)"""
+    """Checking to make sure log is working properly (ec)."""
     attendance_log = {"Monday": ["Akoya", "Cameron"], "Thursday": ["Stacia", "Dontae"]}
     days = "Friday"
     goodstu = "Sam"
